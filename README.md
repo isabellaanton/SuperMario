@@ -11,7 +11,7 @@ Um projeto de jogo de plataforma em 2D desenvolvido na **Godot Engine**, inspira
 | ![Gameplay 1](Assets/inicio.png) | ![Gameplay 2](Assets/nivel1mario.png) |
 | ![Gameplay 1](Assets/fim.png) | ![Gameplay 2](Assets/nivel2mario.png) |
 | | ![Gameplay 2](Assets/nivel3mario.png) |
-| | ![Gameplay 2](Assets/nivel4mario.png) |
+| | ![Gameplay 2](Assets/nivel4finalmario.png) |
 
 
 
