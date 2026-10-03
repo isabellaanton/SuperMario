@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfhj2fwv1wahu"]
+
+[ext_resource type="Script" uid="uid://c42wj261jhtb5" path="res://Win_screen.gd" id="1_5h7s3"]
+[ext_resource type="Texture2D" uid="uid://c528nyk05dv5u" path="res://Assets/maxresdefault.jpg" id="1_mkv17"]
+[ext_resource type="FontFile" uid="uid://bmykjqjwhcu44" path="res://Assets/PixelifySans-VariableFont_wght.ttf" id="3_fi2q2"]
+
+[node name="WinScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -6.0
+offset_top = -5.0
+offset_right = -6.0
+offset_bottom = -5.0
+script = ExtResource("1_5h7s3")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -12.0
+offset_top = -4.0
+offset_right = 1268.0
+offset_bottom = 716.0
+texture = ExtResource("1_mkv17")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 630.0
+offset_top = 133.0
+offset_right = 1022.0
+offset_bottom = 253.0
+metadata/_edit_group_ = true
+
+[node name="RestartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_fi2q2")
+theme_override_font_sizes/font_size = 30
+text = "Reiciniar"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_fi2q2")
+theme_override_font_sizes/font_size = 30
+text = "Sair"

@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://bbvwbefx2kw6r"]
+
+[ext_resource type="Script" uid="uid://2yqm2xs2vlyu" path="res://tela_incial.gd" id="1_tbdpi"]
+[ext_resource type="Texture2D" uid="uid://ctqppt2afjpsk" path="res://Assets/2x1_SuperMarioHub_image1600w.jpg" id="2_o1f4b"]
+[ext_resource type="FontFile" uid="uid://bmykjqjwhcu44" path="res://Assets/PixelifySans-VariableFont_wght.ttf" id="3_o1f4b"]
+
+[sub_resource type="Theme" id="Theme_tbdpi"]
+default_font_size = 0
+
+[node name="Tela_Incial" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_tbdpi")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.075
+anchor_top = 0.5
+anchor_right = -0.075
+anchor_bottom = 3.262
+offset_left = -221.0
+offset_top = -148.0
+offset_right = 1379.0
+offset_bottom = 641.52
+texture = ExtResource("2_o1f4b")
+stretch_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 0.825
+offset_left = 718.0
+offset_top = 383.0
+offset_right = 956.0
+offset_bottom = 638.0
+theme = SubResource("Theme_tbdpi")
+alignment = 1
+
+[node name="PlayButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_o1f4b")
+theme_override_font_sizes/font_size = 30
+text = "Jogar"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_o1f4b")
+theme_override_font_sizes/font_size = 30
+text = "Sair"

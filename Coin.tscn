@@ -1,0 +1,74 @@
+[gd_scene load_steps=11 format=3 uid="uid://2pot6nnybpeq"]
+
+[ext_resource type="Script" uid="uid://vrk4lkr5an75" path="res://Coin.gd" id="1_ou7jl"]
+[ext_resource type="Texture2D" uid="uid://dr55dlf2wigd0" path="res://Assets/420-4201833_coins-clipart-sprite-coin-sprite-sheet-png-transparent-removebg-preview.png" id="2_ou7jl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ufda5"]
+atlas = ExtResource("2_ou7jl")
+region = Rect2(10, 0, 140, 167)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fj540"]
+atlas = ExtResource("2_ou7jl")
+region = Rect2(151, 0, 140, 167)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kjs0g"]
+atlas = ExtResource("2_ou7jl")
+region = Rect2(292, 0, 140, 167)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2bqf1"]
+atlas = ExtResource("2_ou7jl")
+region = Rect2(433, 0, 140, 167)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvgfy"]
+atlas = ExtResource("2_ou7jl")
+region = Rect2(574, 0, 140, 167)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tkog7"]
+atlas = ExtResource("2_ou7jl")
+region = Rect2(715, 0, 140, 167)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m7ulc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ufda5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fj540")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kjs0g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2bqf1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lvgfy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tkog7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vjcl1"]
+radius = 17.0294
+
+[node name="Coin" type="Area2D"]
+collision_layer = 32
+script = ExtResource("1_ou7jl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(101.125, 119.938)
+scale = Vector2(0.296, 0.29)
+sprite_frames = SubResource("SpriteFrames_m7ulc")
+autoplay = "default"
+frame_progress = 0.123882
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(104, 125)
+shape = SubResource("CircleShape2D_vjcl1")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

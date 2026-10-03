@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://8dd38no367ap"]
+
+[ext_resource type="Script" uid="uid://bjwrpml6boiyb" path="res://Goal_2.gd" id="1_eywhy"]
+[ext_resource type="Texture2D" uid="uid://v6eg5eln6l0p" path="res://Assets/NSMBW_Flagpole_Artwork.png" id="2_ubyph"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8wr13"]
+size = Vector2(59, 215.5)
+
+[node name="Goal2" type="Area2D"]
+collision_layer = 16
+script = ExtResource("1_eywhy")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(33.25, 139.75)
+scale = Vector2(0.553691, 0.416493)
+texture = ExtResource("2_ubyph")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(49.5, 139.75)
+shape = SubResource("RectangleShape2D_8wr13")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

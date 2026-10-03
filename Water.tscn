@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dd4uhvmvusstt"]
+
+[ext_resource type="Script" uid="uid://byjv1a6s8pbtn" path="res://Water.gd" id="1_4nnwq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_seble"]
+size = Vector2(1518, 73)
+
+[node name="Water" type="Area2D"]
+collision_layer = 8
+script = ExtResource("1_4nnwq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(962, 704.5)
+shape = SubResource("RectangleShape2D_seble")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
